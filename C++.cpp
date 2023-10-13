@@ -12,19 +12,21 @@ int b = 0;
   else c++;
   return 0;
 }*/
-int series(void)
+int series(int b)
 {
-  static int series_num = 0;
-  if(series_num == 255){return(series_num);}
-  else{series_num++;}
+  static int c = 0;
+  if(b == 255) return 255;
+  else c ++;
+  return 0;
 }
 int main(void)
 {
   A: do {
-   series();
-   b ++;
+   series(b);
+   b++;
   }
   while(b != 255);
-  printf("count called %d times", series);
+  printf("count called %d times", series(b));
   return 0;
 }
+
